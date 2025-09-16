@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Universidad - Gestión de Estudiantes y Cursos</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 2em; }
+    h2 { margin-top: 2em; }
+    table { border-collapse: collapse; width: 100%; margin-bottom: 1em; }
+    th, td { border: 1px solid #ccc; padding: 8px; text-align: left; }
+    th { background: #f0f0f0; }
+    form { margin-bottom: 1em; }
+    label { margin-right: 1em; }
+    input, select { margin-right: 1em; }
+    button { margin-left: 1em; }
+  </style>
+</head>
+<body>
+  <h1>Gestión de Universidad</h1>
+
+  <h2>Estudiantes</h2>
+  <form id="form-estudiante">
+    <label>Nombre: <input type="text" id="nombre-estudiante" required></label>
+    <label>Email: <input type="email" id="email-estudiante" required></label>
+    <button type="submit">Agregar Estudiante</button>
+  </form>
+  <table id="tabla-estudiantes">
+    <thead>
+      <tr><th>ID</th><th>Nombre</th><th>Email</th></tr>
+    </thead>
+    <tbody></tbody>
+  </table>
+
+  <h2>Cursos</h2>
+  <form id="form-curso">
+    <label>Nombre: <input type="text" id="nombre-curso" required></label>
+    <label>Créditos: <input type="number" id="creditos-curso" required min="1"></label>
+    <button type="submit">Agregar Curso</button>
+  </form>
+  <table id="tabla-cursos">
+    <thead>
+      <tr><th>ID</th><th>Nombre</th><th>Créditos</th></tr>
+    </thead>
+    <tbody></tbody>
+  </table>
+
+  <h2>Inscripciones</h2>
+  <form id="form-inscripcion">
+    <label>Estudiante:
+      <select id="select-estudiante"></select>
+    </label>
+    <label>Curso:
+      <select id="select-curso"></select>
+    </label>
+    <label>Fecha:
+      <input type="date" id="fecha-inscripcion" required>
+    </label>
+    <button type="submit">Inscribir</button>
+  </form>
+  <table id="tabla-inscripciones">
+    <thead>
+      <tr><th>ID</th><th>Estudiante</th><th>Curso</th><th>Fecha</th></tr>
+    </thead>
+    <tbody></tbody>
+  </table>
+  <script src="hook.js"></script>
+ 
+</body>
+</html>
